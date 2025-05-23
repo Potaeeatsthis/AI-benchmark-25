@@ -1,18 +1,3 @@
-#!/usr/bin/env python3
-"""
-train_wav2vec2.py
-
-Fine-tune Facebook Wav2Vec2 (wav2vec2-base-960h) for meeting transcription.
-
-Usage:
-  python train_wav2vec2.py \
-    --data_manifest data/manifest.csv \
-    --output_dir outputs/wav2vec2_finetuned \
-    --model_name_or_path facebook/wav2vec2-base-960h \
-    --per_device_train_batch_size 8 \
-    --num_train_epochs 5
-"""
-
 import argparse
 import os
 
@@ -147,7 +132,6 @@ def main():
     trainer.train()
     trainer.save_model(args.output_dir)
     processor.save_pretrained(args.output_dir)
-
 
 if __name__ == "__main__":
     main()
