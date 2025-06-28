@@ -1,5 +1,3 @@
-cat asr.py
-#!/usr/bin/env python
 import os, signal, sys
 import argparse
 from typing import Optional
